@@ -49,7 +49,14 @@ app.get('/about', (req, res, next) => {
   })
 })
 
+app.get('/admin', (req, res, next) => {
+  res.render('admin.hbs', {
+    title: 'Admin panel',
+    h1: 'Admin panel & login page'
+  })
+})
 
+// Всегда внизу
 app.use((req, res, next) => {
   res.status(404).render('404.hbs', {
     title: '404',
